@@ -8,6 +8,11 @@
 class QGraphicsScene;
 class QGraphicsView;
 
+/**
+ * @brief 主窗口类，负责游戏界面的展示和用户交互
+ * 继承自QMainWindow，包含游戏场景、视图和菜单栏等UI元素
+ */
+
 class GameController;
 
 
@@ -28,7 +33,6 @@ private slots:
 	void gameHelp();
 	void about();
     void handleMoveModeSelected(MoveMode mode);
-    void handleGameModeSelected(GameMode mode);
 
 private:
 	void createActions();

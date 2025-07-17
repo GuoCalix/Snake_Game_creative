@@ -6,6 +6,11 @@
 #include "constants.h"
 class GameController;
 
+/**
+ * @brief 蛇类，继承自QGraphicsItem，实现贪吃蛇游戏中的蛇角色
+ * 支持四方向和六方向移动模式，处理蛇的移动、碰撞检测和绘制
+ */
+
 class Snake : public QGraphicsItem
 {
 public:

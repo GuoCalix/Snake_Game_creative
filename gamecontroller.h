@@ -14,6 +14,11 @@ class Snake;
 class Food;
 class Wall;
 
+/**
+ * @brief 游戏控制器类，负责管理游戏的整体逻辑、状态和交互
+ * 协调蛇、食物、墙壁等游戏元素的交互，处理用户输入和游戏流程
+ */
+
 class GameController : public QObject
 {
     Q_OBJECT
@@ -40,6 +45,7 @@ public:
     GameMode getGameMode() const { return currentGameMode; }
     void showGameModeSelection();  // 显示游戏模式选择菜单
     void addWalls();
+    void addRandomWalls(); //随机地形
     void clearMenu(const QString &menuTitle);
     void determineWinner();
 public slots:
@@ -54,6 +60,9 @@ private:
     void handleKeyPressed(QKeyEvent *event,GameController *controller);
     void addNewFood();
     void setResume();
+    QList<Wall*> randomWalls; // 存储随机墙面
+    const int WALL_SIZE = 40; // 单个墙面尺寸（与网格对齐）
+    const int MAX_WALL_ATTEMPTS = 500; // 生成墙面的最大尝试次数（避免死循环）
     QAction * resumeAction;
     QTimer timer;
     QGraphicsScene &scene;
