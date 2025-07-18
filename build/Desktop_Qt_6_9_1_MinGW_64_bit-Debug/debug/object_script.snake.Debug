@@ -1,0 +1,11 @@
+debug/main.o
+debug/mainwindow.o
+debug/food.o
+debug/gamecontroller.o
+debug/snake.o
+debug/wall.o
+debug/hexagongrid.o
+debug/rectgriditem.o
+debug/qrc_res.o
+debug/moc_mainwindow.o
+debug/moc_gamecontroller.o
